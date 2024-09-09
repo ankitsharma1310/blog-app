@@ -1,0 +1,216 @@
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color Palette */
+:root {
+  --dark-grayish: #1E201E;
+  --olive-gray: #3C3D37;
+  --muted-olive: #697565;
+  --light-beige: #ECDFCC;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-beige);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--dark-grayish);
+}
+
+/* Container for overall layout */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--dark-grayish);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--muted-olive);
+}
+
+input, textarea {
+  font-size: 1rem;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--muted-olive);
+  background-color: var(--light-beige);
+  color: var(--dark-grayish);
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: var(--olive-gray);
+  color: var(--light-beige);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--dark-grayish);
+  color: #fff;
+}
+
+/* Post List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Post Card Styling */
+li {
+  background-color: var(--light-beige);
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border: 1px solid var(--muted-olive);
+}
+
+li:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--dark-grayish);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--dark-grayish);
+  margin-bottom: 15px;
+}
+
+/* Buttons for Edit/Delete */
+li a, li form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+li a {
+  background-color: var(--muted-olive);
+  color: var(--light-beige);
+}
+
+li a:hover {
+  background-color: var(--olive-gray);
+  color: var(--light-beige);
+}
+
+li form button {
+  background-color: var(--olive-gray);
+  border: none;
+  cursor: pointer;
+}
+
+li form button:hover {
+  background-color: var(--dark-grayish);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  form, ul {
+      width: 90%;
+  }
+
+  input, textarea, button[type="submit"] {
+      font-size: 1rem;
+  }
+
+  li {
+      padding: 15px;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+
+  li a, li form button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form, ul {
+      width: 100%;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  li {
+      padding: 10px;
+  }
+
+  h3 {
+      font-size: 1.3rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+
+  li a, li form button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+  }
+}
+ 
